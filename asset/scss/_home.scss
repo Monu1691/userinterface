@@ -1,0 +1,249 @@
+// home page style
+
+.dash-panel-sec{
+	@extend %d-flex;
+	@extend %flex-wrap;
+	.dash-sidebar{
+		width: 220px;
+	}
+	.dash-content-box{
+		width: calc(100% - 220px);
+		padding: 15px;
+	}
+}
+
+// top links
+.top-side-bx{
+	padding: 1rem 0.5rem;
+	border-bottom: 1px solid $color-gray;
+	.contacts{
+		.icon{
+			width: 40px;
+			height: 40px;
+			line-height: 35px;
+			font-size: 1.5rem;
+			text-align: center;
+			display: inline-block;
+			color: $color-white;
+			border: 1px solid $color-hover;
+			background-color: $color-hover;
+			border-radius: 100%;
+		}
+	}	
+}
+.create-contact{
+	padding: 5px;
+	.c-contact-btn{
+		border-radius: 3rem;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		background: none;
+		border: none;
+		@include box-shadow(0 1px 3px 0px rgba($color-site,0.75));
+		font-weight: 600;
+		&:hover,&:focus{
+			@include box-shadow(0 2px 5px 0px rgba($color-site,0.75));
+		}
+	}
+}
+
+// sidebar links
+.sidebar-links-bx{
+	padding: 0.5rem 0;
+	.link-ul{
+		margin: 1rem 0 0;
+		li{
+			margin-top: 5px;
+			a{
+				padding: 0.5rem 2rem;
+				width: 100%;
+				font-size: 1.1rem;
+				border-radius: 0 3rem 3rem 0;
+				@extend %d-flex;
+				span{display: inline-block;}
+				.icon{margin-right: 1rem;}
+				.msg{margin-left: auto;}
+				&:hover,&:focus,&.active{
+					background-color: #e8f0fd;
+					color: $color-hover;
+				}
+			}
+		}
+	}
+}
+
+.dash-content-box{
+	padding: 1rem;
+	.content-top-bx{
+		@extend %d-flex;
+		@extend %flex-wrap;
+		align-items: center;
+		margin-bottom: 1rem;
+		.search-dv{width: calc(100% - 250px);}
+		.right-links{width: 150px;}
+	}
+	.right-links{
+		margin-left: auto;
+		text-align: right;
+		padding: 0 1rem;
+		@extend %d-flex;
+		justify-content: space-between;
+		.admin-bx{
+			height: 40px;
+			width: 40px;
+			line-height: 40px;
+			border-style: none;
+			text-align: center;
+			button{
+				background: none;
+				border: none;
+				border-radius: 100%;
+				&:after{
+					content: none;
+				}
+			}
+			.dropdown-menu{
+				ul{
+					margin: 0;
+					li{
+						a{
+							padding: 0 1rem;
+							line-height: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.alfabet{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	font-size: 1.3rem;
+	color: $color-white;
+	background-color: $color-hover;
+	border-radius: 100%;
+	text-align: center;
+}
+.search-dv{
+	#search_form{
+		@extend %d-flex;
+		background-color: $color-gray;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		button{
+			background: none;
+			border: none;
+			height: 40px;
+			width: 40px;
+			line-height: 40px;
+			font-size: 1.3rem;
+			color: $color-site;
+			border-radius: 100%;
+			margin-right: 1rem;
+			&:hover,&:focus{
+				@include box-shadow(0 1px 3px 0px rgba($color-site,0.3));
+			}
+		}
+		input{
+			background: none;
+			border: none;
+			width: calc(100% - 60px);
+			&:hover,&:focus{
+				@include box-shadow(none);
+				outline: none;
+			}
+		}
+	}	
+}
+
+.dash-table{
+	table{
+		color: $color-site;
+		thead{
+			th{
+				border-bottom-width: 1px;
+				border-top: none;
+			}
+		}
+		tbody{
+			tr.title-row{
+				td{
+					border-bottom: none;
+					text-transform: uppercase;
+					font-weight: 600;
+				}
+			}
+			tr.border-top-none{
+				td{
+					border-top: none;
+				}	
+			}
+		}
+	}
+	.ed-btn{
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		font-size: 1.3rem;
+		color: $color-white;		
+		border-radius: 100%;
+		text-align: center;
+		border: none;
+	}
+	.edit{
+		background-color: #00BF35;
+		&:hover,&:focus{
+			@include box-shadow(0 1px 15px 0px rgba(#00BF35,0.3));
+		}
+	}
+	.delete{
+		background-color: #E10100;
+		&:hover,&:focus{
+			@include box-shadow(0 1px 15px 0px rgba(#E10100,0.3));
+		}
+	}
+}
+
+.custom-modal{
+	.modal-content{
+		border: 2px solid $color-site;
+	}
+	.modal-header{
+		@extend %d-flex;
+		align-items: center;
+		.modal-title{
+			span{
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		.close{
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.modal-body{
+		padding: 2rem;
+	}
+	.contact-detal-dv{
+		.info-list{
+			margin-left: 1rem;
+			li{
+				margin-bottom: 0.5rem;
+				@extend %d-flex;
+				.icon{
+					margin-right: 1rem;
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	}
+	.modal-footer{
+		@extend %d-flex;
+		justify-content: space-between;
+	}
+}
