@@ -1,10 +1,10 @@
 /* variables */
 
-$color-site: #5b5c5e;
-$color-hover: #1c73e7;
+$color-site: #434343;
+$color-hover: #7e4dce;
 
 $color-white: #ffffff;
-$color-gray: #f2f3f5;
+$color-gray: #e7e9eb;
 
 // @include common-transition(all 0.3s ease-out);
 @mixin common-transition($transition){
@@ -28,6 +28,12 @@ $color-gray: #f2f3f5;
 	-moz-transform: $transforms;
 	-ms-transform: $transforms;
 	transform: $transforms;
+}
+
+// @include filter(grayscale(1));
+@mixin filter($grayscale) {
+	-webkit-filter: $grayscale;
+	filter: $grayscale;
 }
 
 // @extend %d-flex;

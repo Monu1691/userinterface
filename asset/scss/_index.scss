@@ -1,0 +1,29 @@
+// index style
+
+.login-sec{
+	height: 100vh;
+	text-align: center;
+	background-color: $color-hover;
+	background-image: url(../img/login-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	@extend %d-flex;
+	@extend %flex-wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-form-dv{
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: $color-white;
+	padding: 4rem 3rem;
+	h2{font-weight: 300;}
+	.input-bx{
+		margin-bottom: 1.5rem;
+	}
+	.common-btn{
+		width: 100%;
+		padding: 0.5rem 1rem;
+	}
+}

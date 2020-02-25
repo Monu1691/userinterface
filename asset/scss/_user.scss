@@ -5,18 +5,24 @@
 	@extend %flex-wrap;
 	.dash-sidebar{
 		width: 220px;
+		@include box-shadow(2px 0px 15px 0px rgba(#f5f5f6,0.8));
 	}
 	.dash-content-box{
 		width: calc(100% - 220px);
-		padding: 15px;
+		padding: 20px;
 	}
 }
 
 // top links
 .top-side-bx{
-	padding: 1rem 0.5rem;
+	padding: 1.5rem 1rem;
 	border-bottom: 1px solid $color-gray;
 	.contacts{
+		@extend %d-flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1.3rem;
+		font-weight: 500;
 		.icon{
 			width: 40px;
 			height: 40px;
@@ -25,46 +31,41 @@
 			text-align: center;
 			display: inline-block;
 			color: $color-white;
-			border: 1px solid $color-hover;
 			background-color: $color-hover;
 			border-radius: 100%;
+			margin-right: 10px;
 		}
+		.txt{width: calc(100% - 50px)}
 	}	
 }
 .create-contact{
 	padding: 5px;
 	.c-contact-btn{
-		border-radius: 3rem;
 		width: 100%;
-		padding: 0.5rem 1rem;
 		background: none;
 		border: none;
-		@include box-shadow(0 1px 3px 0px rgba($color-site,0.75));
-		font-weight: 600;
-		&:hover,&:focus{
-			@include box-shadow(0 2px 5px 0px rgba($color-site,0.75));
-		}
 	}
+}
+.dash-sidebar-title{
+	text-transform: uppercase;
 }
 
 // sidebar links
 .sidebar-links-bx{
-	padding: 0.5rem 0;
+	padding: 1.5rem 1rem;
 	.link-ul{
-		margin: 1rem 0 0;
+		margin: 1rem -1rem 0;
 		li{
 			margin-top: 5px;
 			a{
-				padding: 0.5rem 2rem;
+				padding: 0.3rem 1rem;
 				width: 100%;
-				font-size: 1.1rem;
-				border-radius: 0 3rem 3rem 0;
+				font-size: 0.875rem;
 				@extend %d-flex;
 				span{display: inline-block;}
 				.icon{margin-right: 1rem;}
-				.msg{margin-left: auto;}
-				&:hover,&:focus,&.active{
-					background-color: #e8f0fd;
+				.msg{margin-left: 0.5rem;}
+				&:hover,&:focus{
 					color: $color-hover;
 				}
 			}
@@ -79,36 +80,41 @@
 		@extend %flex-wrap;
 		align-items: center;
 		margin-bottom: 1rem;
-		.search-dv{width: calc(100% - 250px);}
-		.right-links{width: 150px;}
+		.search-dv{
+			width: 100%;
+			max-width: 600px;
+		}
 	}
 	.right-links{
 		margin-left: auto;
 		text-align: right;
-		padding: 0 1rem;
 		@extend %d-flex;
 		justify-content: space-between;
 		.admin-bx{
-			height: 40px;
-			width: 40px;
-			line-height: 40px;
 			border-style: none;
-			text-align: center;
 			button{
 				background: none;
 				border: none;
-				border-radius: 100%;
 				&:after{
 					content: none;
 				}
 			}
 			.dropdown-menu{
+				margin: 0;
+				padding: 0;
+				border: none;
+				@include box-shadow(0px 0px 20px 0px rgba($color-gray,0.9));
 				ul{
 					margin: 0;
 					li{
 						a{
-							padding: 0 1rem;
+							padding: 0.8rem;
 							line-height: 1rem;
+							display: block;
+							border-bottom: 1px solid $color-gray;
+							.icon{
+								margin-right: 3px;
+							}
 						}
 					}
 				}
@@ -131,7 +137,7 @@
 	#search_form{
 		@extend %d-flex;
 		background-color: $color-gray;
-		padding: 0.5rem;
+		padding: 0.3rem 0.5rem;
 		border-radius: 0.5rem;
 		button{
 			background: none;
@@ -162,6 +168,7 @@
 .dash-table{
 	table{
 		color: $color-site;
+		th{font-weight: 500;}
 		thead{
 			th{
 				border-bottom-width: 1px;
@@ -170,10 +177,14 @@
 		}
 		tbody{
 			tr.title-row{
-				td{
+				th{
 					border-bottom: none;
 					text-transform: uppercase;
-					font-weight: 600;
+					.title-msg{
+						display: inline-block;
+						line-height: 1.3rem;
+						border-bottom: 2px solid $color-gray;
+					}
 				}
 			}
 			tr.border-top-none{
@@ -181,69 +192,25 @@
 					border-top: none;
 				}	
 			}
+			tr{
+				td{
+					font-size: 0.875rem;
+					border-top: none;
+				}
+				td:last-child{text-align: right;}
+			}
 		}
 	}
 	.ed-btn{
-		height: 40px;
-		width: 40px;
-		line-height: 40px;
-		font-size: 1.3rem;
-		color: $color-white;		
-		border-radius: 100%;
-		text-align: center;
+		background: none;
 		border: none;
-	}
-	.edit{
-		background-color: #00BF35;
-		&:hover,&:focus{
-			@include box-shadow(0 1px 15px 0px rgba(#00BF35,0.3));
+		img{
+			@include common-transition(all 0.3s ease-out);
+			@include filter(grayscale(1));
 		}
-	}
-	.delete{
-		background-color: #E10100;
 		&:hover,&:focus{
-			@include box-shadow(0 1px 15px 0px rgba(#E10100,0.3));
+			img{@include filter(none);}
 		}
 	}
 }
 
-.custom-modal{
-	.modal-content{
-		border: 2px solid $color-site;
-	}
-	.modal-header{
-		@extend %d-flex;
-		align-items: center;
-		.modal-title{
-			span{
-				display: inline-block;
-				vertical-align: middle;
-			}
-		}
-		.close{
-			margin: 0;
-			padding: 0;
-		}
-	}
-	.modal-body{
-		padding: 2rem;
-	}
-	.contact-detal-dv{
-		.info-list{
-			margin-left: 1rem;
-			li{
-				margin-bottom: 0.5rem;
-				@extend %d-flex;
-				.icon{
-					margin-right: 1rem;
-					width: 24px;
-					height: 24px;
-				}
-			}
-		}
-	}
-	.modal-footer{
-		@extend %d-flex;
-		justify-content: space-between;
-	}
-}
