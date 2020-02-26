@@ -4,12 +4,33 @@
 	@extend %d-flex;
 	@extend %flex-wrap;
 	.dash-sidebar{
-		width: 220px;
-		@include box-shadow(2px 0px 15px 0px rgba(#f5f5f6,0.8));
+		width: 270px;
+		@include box-shadow(2px 0px 20px 0px rgba($color-shadow, 1));
+		height: 100vh;
+		overflow-y: scroll;
+		
 	}
 	.dash-content-box{
-		width: calc(100% - 220px);
+		width: calc(100% - 270px);
 		padding: 20px;
+		height: 100vh;
+		overflow-y: scroll;
+	}
+	.dash-sidebar::-webkit-scrollbar,
+	.dash-content-box::-webkit-scrollbar{ 
+		border-radius: none;
+		-webkit-box-shadow: none;
+	}
+	.dash-sidebar::-webkit-scrollbar-track,
+	.dash-content-box::-webkit-scrollbar-track {
+		border-radius: none;
+		-webkit-box-shadow: none; 
+	}
+
+	.dash-sidebar::-webkit-scrollbar-thumb,
+	.dash-content-box::-webkit-scrollbar-thumb{
+		border-radius: none;
+		-webkit-box-shadow: none; 
 	}
 }
 
@@ -35,7 +56,10 @@
 			border-radius: 100%;
 			margin-right: 10px;
 		}
-		.txt{width: calc(100% - 50px)}
+		.txt{
+			width: calc(100% - 50px);
+			font-size: 1.1rem;
+		}
 	}	
 }
 .create-contact{
@@ -61,12 +85,14 @@
 				padding: 0.3rem 1rem;
 				width: 100%;
 				font-size: 0.875rem;
+				border-left: 2px solid transparent;
 				@extend %d-flex;
 				span{display: inline-block;}
 				.icon{margin-right: 1rem;}
 				.msg{margin-left: 0.5rem;}
-				&:hover,&:focus{
-					color: $color-hover;
+				&:hover,&:focus,&.active{
+					border-left-color: $color-hover;
+					background-color: #F2F3F3;
 				}
 			}
 		}
@@ -184,6 +210,7 @@
 						display: inline-block;
 						line-height: 1.3rem;
 						border-bottom: 2px solid $color-gray;
+						font-size: 0.75rem;
 					}
 				}
 			}
@@ -212,5 +239,6 @@
 			img{@include filter(none);}
 		}
 	}
+	.delete-btn{margin-left: 0.5rem;}
 }
 

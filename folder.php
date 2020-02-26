@@ -201,57 +201,48 @@
 					</div><!-- content-top-bx -->
 
 					<div class="content-main-dv">
-						<section class="folder-grid-sec py-4">
-							<div class="row">
-								<div class="col-lg-4 col-sm-6">
-									<div class="folder-grid-bx">
-										<div class="txt-bx">
-											<div class="icon">
-												<img src="asset/img/contacts.png" alt="Icon">
-											</div>
-											<div class="name">Contacts</div>
-										</div><!-- txt-bx -->
-										<div class="nmb">
-											<span>8</span>
-										</div><!-- nmb -->
-									</div><!-- folder-grid-bx -->
-								</div><!-- col -->
-								<div class="col-lg-4 col-sm-6">
-									<div class="folder-grid-bx">
-										<div class="txt-bx">
-											<div class="icon">
-												<img src="asset/img/folders.png" alt="Icon">
-											</div>
-											<div class="name">Folders</div>
-										</div><!-- txt-bx -->
-										<div class="nmb">
-											<span>3</span>
-										</div><!-- nmb -->
-									</div><!-- folder-grid-bx -->
-								</div><!-- col -->
 
-							</div><!-- row -->
-						</section><!-- folder-grid-sec -->
+						<section class="folder-name-sec py-4">
+							<div class="folder-info">
+								<h3 class="f-titlt mb-0">Folder name 1</h3>
+								<p>1 contacts in this folder</p>
+							</div><!-- folder-info -->
+
+							<div class="opration">
+								<button class="rename common-btn">Rename</button>
+								<button class="delete common-btn">Delete</button>
+							</div><!-- opration -->
+						</section><!-- folder-name-sec -->
 
 						<section class="dash-table">
 							<table class="table">
 								<thead>
 									<tr>
-										<th style="width:100px;">#</th>
-										<th>Username</th>
+										<th>Name</th>
+										<th>Company</th>
+										<th>Email</th>
+										<th>Phone Number</th>
 										<th></th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td><span>1</span></td>
+									<tr class="title-row">
+										<th colspan="4">
+											<span class="title-msg">Contacts (2,849)</span>
+										</th>
+									</tr>
+
+									<tr class="border-top-none">
 										<td>
-											<a href="javascript:void(0);" data-toggle="modal" data-target="#contact_detail">
+											<a href="javascript:void(0);">
 												<span>John smith</span>
 											</a>
 										</td>
+										<td><span>JS & Co.</span></td>
+										<td><span>john@no.com</span></td>
+										<td><a href="tel:555-555-1212">555-555-1212</a></td>
 										<td>
-											<button class="ed-btn edit-btn" data-toggle="modal" data-target="#editModal">
+											<button class="ed-btn edit-btn">
 												<img src="asset/img/edit.png" alt="Edit">
 											</button>
 											<button class="ed-btn delete-btn">
@@ -260,16 +251,18 @@
 										</td>
 									</tr>
 
-									<?php for($tr=2; $tr<=7; $tr++){ ?>
+									<?php for($tr=1; $tr<=6; $tr++){ ?>
 										<tr>
-											<td><span><?php echo $tr; ?></span></td>
 											<td>
-												<a href="javascript:void(0);" data-toggle="modal" data-target="#contact_detail">
+												<a href="javascript:void(0);">
 													<span>Bob Doe</span>
 												</a>
 											</td>
+											<td><span>JS & Co.</span></td>
+											<td><span>john@no.com</span></td>
+											<td><a href="tel:555-555-1212">555-555-1212</a></td>
 											<td>
-												<button class="ed-btn edit-btn" data-toggle="modal" data-target="#editModal">
+												<button class="ed-btn edit-btn">
 													<img src="asset/img/edit.png" alt="Edit">
 												</button>
 												<button class="ed-btn delete-btn">
@@ -278,7 +271,6 @@
 											</td>
 										</tr>
 									<?php } ?>
-
 								</tbody>
 							</table>
 

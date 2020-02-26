@@ -1,0 +1,19 @@
+// folder style
+
+.folder-name-sec{
+	@extend %d-flex;
+	@extend %flex-wrap;
+	justify-content: space-between;
+	.folder-info{
+		p{line-height: 1.2rem;}
+	}
+	.opration{
+		.common-btn{
+			margin-left: 1rem;
+		}
+		.delete{
+			background-color: $color-red;
+			border-color: $color-red;
+		}
+	}
+}

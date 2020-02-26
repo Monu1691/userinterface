@@ -20,7 +20,7 @@
 			<section class="login-sec">
 				<div class="container">
 					<div class="login-dv">
-						<h1 class="text-white mb-5">Valley OBGUN Contacts</h1>
+						<h1 class="text-white mb-3">Valley OBGUN Contacts</h1>
 
 						<div class="login-form-dv">
 							<h2>Welcome</h2>
@@ -28,8 +28,9 @@
 								<div class="input-bx">
 									<input type="text" name="username" id="" class="form-control" placeholder="Enter Your Username">
 								</div>
-								<div class="input-bx">
+								<div class="input-bx password-bx">
 									<input type="password" name="password" id="" class="form-control" placeholder="Enter Your Password">
+									<span class="eye"><i class="fa fa-eye" aria-hidden="true"></i></span>
 								</div>
 
 								<div class="submit">

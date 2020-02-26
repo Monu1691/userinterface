@@ -51,7 +51,8 @@ ul{
 	padding: 3rem 0;
 }
 .common-btn{
-	padding: 0.3rem 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
 	border-radius: 0;
 	border: 1px solid $color-hover;
 	background-color: $color-hover;
@@ -138,22 +139,12 @@ ul{
 		}
 	}
 	.folder-icon:before{background-image: url(../img/folder.png);}
-	.user-icon:before{background-image: url(../img/user.png);}
+	.user-icon:before{background-image: url(../img/user-gray.png);}
 	.company-icon:before{background-image: url(../img/company.png);}
 	.email-icon:before{background-image: url(../img/email.png);}
 	.phone-icon:before{background-image: url(../img/phone.png);}
 	.password-icon:before{background-image: url(../img/password.png);}
 }
-
-.round-btn{
-	background: none;
-	min-width: 150px;
-	padding: 0.3rem 1rem;
-	border-radius: 3rem;
-	background: none;
-	border: 1px solid $color-gray;
-}
-
 
 .custom-modal{
 	.modal-header{
@@ -186,5 +177,80 @@ ul{
 	.modal-footer{
 		@extend %d-flex;
 		justify-content: space-between;
+	}
+}
+
+// checkbox
+.tick-bx {
+	position: relative;
+	.input-tick{
+		width: 24px;
+		margin-right: 5px;
+		position: relative;
+		input[type="checkbox"]{
+			visibility: hidden;
+		}
+		label{
+			border: 1px solid $color-site;
+			border-radius: 3px;
+			cursor: pointer;
+			height: 18px;
+			width: 18px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			margin-bottom: 0;
+			&:after{
+				border: 2px solid $color-hover;
+				border-top: none;
+				border-right: none;
+				content: "";
+				height: 6px;
+				left: 3px;
+				opacity: 0;
+				position: absolute;
+				top: 4px;
+				transform: rotate(-45deg);
+				width: 10px;
+			}
+		}
+		// input[type="checkbox"]:checked + label{
+		// 	background-color: #5ed3cb;
+		// }
+		input[type="checkbox"]:checked + label:after {
+			opacity: 1;
+		}
+	}
+	.txt{
+		width: calc(100% - 35px);
+		line-height: 18px;
+		text-align: left;
+	}
+}
+
+.select-round{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 1.5rem;
+	&:after{
+		content: '\f107';
+		font: normal normal normal 14px/1 FontAwesome;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		font-size: 20px;
+	}
+	select{
+		background: none;
+		min-width: 100px;
+		border-radius: 3rem;
+		background: none;
+		border: 1px solid $color-site;
+		padding: 0.2rem 2rem;
+		font-size: 1rem;
+		@include appearance(none);
+		&:hover,&:focus{
+			outline:none;
+		}
 	}
 }

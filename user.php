@@ -39,11 +39,11 @@
 						</div><!-- create-folder -->
 
 						<div class="create-contact create-user">
-							<a href="javascript:void(0);" class="c-contact-btn" data-toggle="modal" data-target="#createUser">
+							<a href="javascript:void(0);" class="c-contact-btn" data-toggle="modal" data-target="#createContact">
 								<span class="icon mr-2">
-									<img src="asset/img/folder.png" alt="Icon">
+									<img src="asset/img/user.png" alt="Icon">
 								</span>
-								<span class="txt">Create user</span>
+								<span class="txt">Create Contact</span>
 							</a>
 						</div><!-- create-user -->
 
@@ -80,48 +80,81 @@
 					</section><!-- modal -->
 
 					<!-- Modal -->
-					<section class="modal fade custom-modal" id="createUser" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+					<section class="modal fade custom-modal" id="createContact" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
+
 								<div class="modal-body text-center">
+									<h2 class="modal-title mb-2">Create new Contact</h2>
+
 									<section class="custom-form-sec">
-										<h2 class="modal-title mb-3">Create User</h2>
 										<form class="icon-form" action="" method="post">
+											<div class="select-round">
+												<select name="folder" id="">
+													<option value="">Folder</option>
+													<option value="">Folder 1</option>
+													<option value="">Folder 2</option>
+													<option value="">Folder 3</option>
+												</select>
+											</div>
+											
 											<div class="row user-icon">
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="text" name="f_name" id="" class="form-control" autocomplete="off" required>
+														<label>First Name</label>
+													</div>
+												</div><!-- col -->
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="text" name="l_name" id="" class="form-control" autocomplete="off" required>
+														<label>Sur Name</label>
+													</div>
+												</div><!-- col -->
+											</div><!-- row -->
+
+											<div class="row company-icon">
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="text" name="company" id="" class="form-control" autocomplete="off" required>
+														<label>Company</label>
+													</div>
+												</div><!-- col -->
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="text" name="job_title" id="" class="form-control" autocomplete="off" required>
+														<label>Job Title</label>
+													</div>
+												</div><!-- col -->
+											</div><!-- row -->
+
+											<div class="row email-icon">
 												<div class="col-sm-12">
 													<div class="input-bx">
-														<input type="text" name="user_name" id="" class="form-control" autocomplete="off" required>
-														<label>User Name</label>
+														<input type="email" name="email" id="" class="form-control" autocomplete="off" required>
+														<label>Email</label>
 													</div>
 												</div><!-- col -->
 											</div><!-- row -->
 
-											<div class="row password-icon">
+											<div class="row phone-icon">
 												<div class="col-sm-12">
 													<div class="input-bx">
-														<input type="password" name="password" id="" class="form-control" autocomplete="off" required>
-														<label>Password</label>
+														<input type="tel" name="phone" id="" class="form-control" autocomplete="off" required>
+														<label>Phone</label>
 													</div>
 												</div><!-- col -->
 											</div><!-- row -->
 
-											<div class="row">
-												<div class="col-sm-12">
-													<div class="input-checkbx text-left mb-3">
-														<input type="checkbox" name="password" id="" autocomplete="off" required>
-														<label>Edit Permition</label>
-													</div>
-												</div><!-- col -->
-											</div><!-- row -->
-
-											<button type="submit" class="common-btn">Create</button>
+											<button type="submit" class="common-btn">Save</button>
 										</form>
 									</section><!-- custom-form-sec -->
+
 								</div><!-- modal-body -->
 							</div>
 						</div>
@@ -218,7 +251,7 @@
 
 									<tr class="border-top-none">
 										<td>
-											<a href="javascript:void(0);" data-toggle="modal" data-target="#contact_detail">
+											<a href="javascript:void(0);">
 												<span>John smith</span>
 											</a>
 										</td>
@@ -226,7 +259,7 @@
 										<td><span>john@no.com</span></td>
 										<td><a href="tel:555-555-1212">555-555-1212</a></td>
 										<td>
-											<button class="ed-btn edit-btn" data-toggle="modal" data-target="#editModal">
+											<button class="ed-btn edit-btn">
 												<img src="asset/img/edit.png" alt="Edit">
 											</button>
 											<button class="ed-btn delete-btn">
@@ -238,7 +271,7 @@
 									<?php for($tr=1; $tr<=6; $tr++){ ?>
 										<tr>
 											<td>
-												<a href="javascript:void(0);" data-toggle="modal" data-target="#contact_detail">
+												<a href="javascript:void(0);">
 													<span>Bob Doe</span>
 												</a>
 											</td>
@@ -246,7 +279,7 @@
 											<td><span>john@no.com</span></td>
 											<td><a href="tel:555-555-1212">555-555-1212</a></td>
 											<td>
-												<button class="ed-btn edit-btn" data-toggle="modal" data-target="#editModal">
+												<button class="ed-btn edit-btn">
 													<img src="asset/img/edit.png" alt="Edit">
 												</button>
 												<button class="ed-btn delete-btn">
@@ -258,79 +291,7 @@
 
 								</tbody>
 							</table>
-
-							<!-- Modal -->
-							<section class="modal fade custom-modal" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body text-center">
-											<h2 class="modal-title mb-2">Create new Contact</h2>
-											<p><button class="round-btn">Folder</button></p>
-
-											<section class="custom-form-sec">
-												<form class="icon-form" action="" method="post">
-													<div class="row user-icon">
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="f_name" id="" class="form-control" autocomplete="off" required>
-																<label>First Name</label>
-															</div>
-														</div><!-- col -->
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="l_name" id="" class="form-control" autocomplete="off" required>
-																<label>Sur Name</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row company-icon">
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="company" id="" class="form-control" autocomplete="off" required>
-																<label>Company</label>
-															</div>
-														</div><!-- col -->
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="job_title" id="" class="form-control" autocomplete="off" required>
-																<label>Job Title</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row email-icon">
-														<div class="col-sm-12">
-															<div class="input-bx">
-																<input type="email" name="email" id="" class="form-control" autocomplete="off" required>
-																<label>Email</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row phone-icon">
-														<div class="col-sm-12">
-															<div class="input-bx">
-																<input type="tel" name="phone" id="" class="form-control" autocomplete="off" required>
-																<label>Phone</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<button type="submit" class="common-btn">Save</button>
-												</form>
-											</section><!-- custom-form-sec -->
-
-										</div><!-- modal-body -->
-									</div>
-								</div>
-							</section><!-- modal -->						
-
+							
 						</section>
 					</div><!-- content-main-dv -->
 

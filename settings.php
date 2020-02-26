@@ -201,161 +201,50 @@
 					</div><!-- content-top-bx -->
 
 					<div class="content-main-dv">
-						<section class="folder-grid-sec py-4">
-							<div class="row">
-								<div class="col-lg-4 col-sm-6">
-									<div class="folder-grid-bx">
-										<div class="txt-bx">
-											<div class="icon">
-												<img src="asset/img/contacts.png" alt="Icon">
+
+						<section class="settings-sec py-4">
+							<h2 class="setting-title mb-3">Settings</h2>
+							<section class="custom-form-sec">
+								<form class="icon-form" action="" method="post">
+									<div class="row user-icon">
+										<div class="col-sm-12">
+											<div class="input-bx">
+												<input type="text" name="o_user_name" id="" class="form-control" autocomplete="off" required="">
+												<label>Old User Name</label>
 											</div>
-											<div class="name">Contacts</div>
-										</div><!-- txt-bx -->
-										<div class="nmb">
-											<span>8</span>
-										</div><!-- nmb -->
-									</div><!-- folder-grid-bx -->
-								</div><!-- col -->
-								<div class="col-lg-4 col-sm-6">
-									<div class="folder-grid-bx">
-										<div class="txt-bx">
-											<div class="icon">
-												<img src="asset/img/folders.png" alt="Icon">
+										</div><!-- col -->
+									</div><!-- row -->
+									<div class="row user-icon">
+										<div class="col-sm-12">
+											<div class="input-bx">
+												<input type="text" name="n_user_name" id="" class="form-control" autocomplete="off" required="">
+												<label>New User Name</label>
 											</div>
-											<div class="name">Folders</div>
-										</div><!-- txt-bx -->
-										<div class="nmb">
-											<span>3</span>
-										</div><!-- nmb -->
-									</div><!-- folder-grid-bx -->
-								</div><!-- col -->
+										</div><!-- col -->
+									</div><!-- row -->
 
-							</div><!-- row -->
-						</section><!-- folder-grid-sec -->
+									<div class="row password-icon">
+										<div class="col-sm-12">
+											<div class="input-bx">
+												<input type="password" name="o_password" id="" class="form-control" autocomplete="off" required="">
+												<label>Old Password</label>
+											</div>
+										</div><!-- col -->
+									</div><!-- row -->
+									<div class="row password-icon">
+										<div class="col-sm-12">
+											<div class="input-bx">
+												<input type="password" name="n_password" id="" class="form-control" autocomplete="off" required="">
+												<label>New Password</label>
+											</div>
+										</div><!-- col -->
+									</div><!-- row -->
 
-						<section class="dash-table">
-							<table class="table">
-								<thead>
-									<tr>
-										<th style="width:100px;">#</th>
-										<th>Username</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><span>1</span></td>
-										<td>
-											<a href="javascript:void(0);" data-toggle="modal" data-target="#contact_detail">
-												<span>John smith</span>
-											</a>
-										</td>
-										<td>
-											<button class="ed-btn edit-btn" data-toggle="modal" data-target="#editModal">
-												<img src="asset/img/edit.png" alt="Edit">
-											</button>
-											<button class="ed-btn delete-btn">
-												<img src="asset/img/delete.png" alt="Edit">
-											</button>
-										</td>
-									</tr>
-
-									<?php for($tr=2; $tr<=7; $tr++){ ?>
-										<tr>
-											<td><span><?php echo $tr; ?></span></td>
-											<td>
-												<a href="javascript:void(0);" data-toggle="modal" data-target="#contact_detail">
-													<span>Bob Doe</span>
-												</a>
-											</td>
-											<td>
-												<button class="ed-btn edit-btn" data-toggle="modal" data-target="#editModal">
-													<img src="asset/img/edit.png" alt="Edit">
-												</button>
-												<button class="ed-btn delete-btn">
-													<img src="asset/img/delete.png" alt="Edit">
-												</button>
-											</td>
-										</tr>
-									<?php } ?>
-
-								</tbody>
-							</table>
-
-							<!-- Modal -->
-							<section class="modal fade custom-modal" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body text-center">
-											<h2 class="modal-title mb-2">Create new Contact</h2>
-											<p><button class="round-btn">Folder</button></p>
-
-											<section class="custom-form-sec">
-												<form class="icon-form" action="" method="post">
-													<div class="row user-icon">
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="f_name" id="" class="form-control" autocomplete="off" required>
-																<label>First Name</label>
-															</div>
-														</div><!-- col -->
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="l_name" id="" class="form-control" autocomplete="off" required>
-																<label>Sur Name</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row company-icon">
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="company" id="" class="form-control" autocomplete="off" required>
-																<label>Company</label>
-															</div>
-														</div><!-- col -->
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="job_title" id="" class="form-control" autocomplete="off" required>
-																<label>Job Title</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row email-icon">
-														<div class="col-sm-12">
-															<div class="input-bx">
-																<input type="email" name="email" id="" class="form-control" autocomplete="off" required>
-																<label>Email</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row phone-icon">
-														<div class="col-sm-12">
-															<div class="input-bx">
-																<input type="tel" name="phone" id="" class="form-control" autocomplete="off" required>
-																<label>Phone</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<button type="submit" class="common-btn">Save</button>
-												</form>
-											</section><!-- custom-form-sec -->
-
-										</div><!-- modal-body -->
-									</div>
-								</div>
-							</section><!-- modal -->
-
-							
-						</section>
+									<button type="submit" class="common-btn">Save</button>
+								</form>
+							</section>
+						</section><!-- settings-sec -->
+						
 					</div><!-- content-main-dv -->
 
 				</section><!-- dash-content-box -->

@@ -5,6 +5,8 @@ $color-hover: #7e4dce;
 
 $color-white: #ffffff;
 $color-gray: #e7e9eb;
+$color-red: #FF2B06;
+$color-shadow: #f0f0fa;
 
 // @include common-transition(all 0.3s ease-out);
 @mixin common-transition($transition){
@@ -36,6 +38,30 @@ $color-gray: #e7e9eb;
 	filter: $grayscale;
 }
 
+// @include appearance(none);
+@mixin appearance($appearance){
+	-moz-appearance: $appearance;
+	-webkit-appearance: $appearance;
+	appearance: $appearance;
+}
+
+// @extend %scroll-behavior;
+%scroll-behavior{
+	::-webkit-scrollbar {
+		border-radius: none;
+		-webkit-box-shadow: none; 
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: none;
+		-webkit-box-shadow: none; 
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: none;
+		-webkit-box-shadow: none; 
+	}
+}
 // @extend %d-flex;
 %d-flex{
 	display: -webkit-flex;
