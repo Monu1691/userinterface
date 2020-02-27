@@ -41,7 +41,7 @@
 						<div class="create-contact create-user">
 							<a href="javascript:void(0);" class="c-contact-btn" data-toggle="modal" data-target="#createUser">
 								<span class="icon mr-2">
-									<img src="asset/img/folder.png" alt="Icon">
+									<img src="asset/img/user.png" alt="Icon">
 								</span>
 								<span class="txt">Create user</span>
 							</a>
@@ -202,6 +202,7 @@
 
 					<div class="content-main-dv">
 						<section class="folder-grid-sec py-4">
+							<h1>Admin Dashboard</h1>
 							<div class="row">
 								<div class="col-lg-4 col-sm-6">
 									<div class="folder-grid-bx">
@@ -233,6 +234,7 @@
 							</div><!-- row -->
 						</section><!-- folder-grid-sec -->
 
+						<h2 class="h1 mt-3">Users</h2>
 						<section class="dash-table">
 							<table class="table">
 								<thead>
@@ -282,79 +284,6 @@
 								</tbody>
 							</table>
 
-							<!-- Modal -->
-							<section class="modal fade custom-modal" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body text-center">
-											<h2 class="modal-title mb-2">Create new Contact</h2>
-											<p><button class="round-btn">Folder</button></p>
-
-											<section class="custom-form-sec">
-												<form class="icon-form" action="" method="post">
-													<div class="row user-icon">
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="f_name" id="" class="form-control" autocomplete="off" required>
-																<label>First Name</label>
-															</div>
-														</div><!-- col -->
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="l_name" id="" class="form-control" autocomplete="off" required>
-																<label>Sur Name</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row company-icon">
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="company" id="" class="form-control" autocomplete="off" required>
-																<label>Company</label>
-															</div>
-														</div><!-- col -->
-														<div class="col-sm-6">
-															<div class="input-bx">
-																<input type="text" name="job_title" id="" class="form-control" autocomplete="off" required>
-																<label>Job Title</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row email-icon">
-														<div class="col-sm-12">
-															<div class="input-bx">
-																<input type="email" name="email" id="" class="form-control" autocomplete="off" required>
-																<label>Email</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<div class="row phone-icon">
-														<div class="col-sm-12">
-															<div class="input-bx">
-																<input type="tel" name="phone" id="" class="form-control" autocomplete="off" required>
-																<label>Phone</label>
-															</div>
-														</div><!-- col -->
-													</div><!-- row -->
-
-													<button type="submit" class="common-btn">Save</button>
-												</form>
-											</section><!-- custom-form-sec -->
-
-										</div><!-- modal-body -->
-									</div>
-								</div>
-							</section><!-- modal -->
-
-							
 						</section>
 					</div><!-- content-main-dv -->
 

@@ -133,8 +133,29 @@
 												</div><!-- col -->
 											</div><!-- row -->
 
+											<div class="row phone-icon">
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="tel" name="mobile" id="" class="form-control" autocomplete="off" required>
+														<label>Mobile</label>
+													</div>
+												</div><!-- col -->
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="tel" name="phone" id="" class="form-control" autocomplete="off" required>
+														<label>Phone</label>
+													</div>
+												</div><!-- col -->
+											</div><!-- row -->
+
 											<div class="row email-icon">
-												<div class="col-sm-12">
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="text" name="fex" id="" class="form-control" autocomplete="off" required>
+														<label>Fax</label>
+													</div>
+												</div><!-- col -->
+												<div class="col-sm-6">
 													<div class="input-bx">
 														<input type="email" name="email" id="" class="form-control" autocomplete="off" required>
 														<label>Email</label>
@@ -142,11 +163,26 @@
 												</div><!-- col -->
 											</div><!-- row -->
 
-											<div class="row phone-icon">
+											<div class="row url-icon">
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="url" name="website" id="" class="form-control" autocomplete="off" required>
+														<label>Web Site</label>
+													</div>
+												</div><!-- col -->
+												<div class="col-sm-6">
+													<div class="input-bx">
+														<input type="text" name="address" id="" class="form-control" autocomplete="off" required>
+														<label>Address</label>
+													</div>
+												</div><!-- col -->
+											</div><!-- row -->
+
+											<div class="row">
 												<div class="col-sm-12">
 													<div class="input-bx">
-														<input type="tel" name="phone" id="" class="form-control" autocomplete="off" required>
-														<label>Phone</label>
+														<textarea name="notes" id="" class="form-control" rows="2" autocomplete="off" required></textarea>
+														<label>Notes</label>
 													</div>
 												</div><!-- col -->
 											</div><!-- row -->

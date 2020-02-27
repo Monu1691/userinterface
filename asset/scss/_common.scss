@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,h6{
 }
 h1,.h1{font-size: 2rem;}
 h2,.h2{font-size: 1.5rem;}
-h3,.h3{font-size: 1.1rem;}
+h3,.h3{font-size: 20px;}
 h4,.h4{font-size: 1rem;}
 a{
 	@include common-transition(all 0.3s ease-out);
@@ -93,7 +93,7 @@ ul{
 	.input-bx{
 		margin-bottom: 1.5rem;
 		position: relative;
-		input{
+		input,textarea{
 			border-width: 0;
 			border-bottom-width: 1px;
 		}
@@ -109,7 +109,8 @@ ul{
 			transition: 0.5s;
 			@include transform(translateY(-50%));
 		}
-		input:focus + label{
+		input:focus + label,
+		textarea:focus + label{
 			top: -8px;
 			@include transform(translateY(0));
 		}
@@ -144,6 +145,7 @@ ul{
 	.email-icon:before{background-image: url(../img/email.png);}
 	.phone-icon:before{background-image: url(../img/phone.png);}
 	.password-icon:before{background-image: url(../img/password.png);}
+	.url-icon:before{background-image: url(../img/url.png);}
 }
 
 .custom-modal{
@@ -237,7 +239,7 @@ ul{
 		font: normal normal normal 14px/1 FontAwesome;
 		position: absolute;
 		right: 20px;
-		top: 10px;
+		top: 7px;
 		font-size: 20px;
 	}
 	select{
@@ -246,11 +248,17 @@ ul{
 		border-radius: 3rem;
 		background: none;
 		border: 1px solid $color-site;
-		padding: 0.2rem 2rem;
-		font-size: 1rem;
+		padding: 0px 25px;
+		font-weight: 300;
 		@include appearance(none);
 		&:hover,&:focus{
 			outline:none;
 		}
 	}
 }
+
+.table{
+	td,th{
+		padding: 5px;
+	}
+} 

@@ -20,10 +20,12 @@
 			<section class="login-sec">
 				<div class="container">
 					<div class="login-dv">
-						<h1 class="text-white mb-3">Valley OBGUN Contacts</h1>
+						<div class="logo-bx">
+							<span>Valley OBGYN Contacts</span>
+						</div>
 
 						<div class="login-form-dv">
-							<h2>Welcome</h2>
+							<h2 class="h1 mb-4">Welcome Back !</h2>
 							<form action="" method="post">
 								<div class="input-bx">
 									<input type="text" name="username" id="" class="form-control" placeholder="Enter Your Username">

@@ -13,11 +13,26 @@
 	align-items: center;
 }
 
+.logo-bx{
+	height: 120px;
+	width: 120px;
+	border-radius: 100%;
+	background-color: $color-white;
+	margin: 0 auto 4rem;
+	@extend %d-flex;
+	@extend %flex-column;
+	justify-content: center;
+	span{
+		display: inline-block;
+		line-height: 1rem;
+	}
+}
+
 .login-form-dv{
-	max-width: 500px;
+	max-width: 550px;
 	margin: 0 auto;
 	background-color: $color-white;
-	padding: 4rem 3rem;
+	padding: 4rem;
 	h2{font-weight: 300;}
 	.input-bx{
 		margin-bottom: 1.5rem;

@@ -41,7 +41,7 @@
 						<div class="create-contact create-user">
 							<a href="javascript:void(0);" class="c-contact-btn" data-toggle="modal" data-target="#createUser">
 								<span class="icon mr-2">
-									<img src="asset/img/folder.png" alt="Icon">
+									<img src="asset/img/user.png" alt="Icon">
 								</span>
 								<span class="txt">Create user</span>
 							</a>
