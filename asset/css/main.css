@@ -116,9 +116,10 @@ ul {
 
 .form-control {
   height: auto;
-  padding: 10px 15px;
+  padding: 14px 15px;
   border: 1px solid #c1c1c1;
   border-radius: 0;
+  font-size: 14px;
   outline: none; }
   .form-control:hover, .form-control:focus {
     -webkit-box-shadow: none;
@@ -273,6 +274,38 @@ ul {
     .select-round select:hover, .select-round select:focus {
       outline: none; }
 
+.select-folder {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem; }
+  .select-folder button {
+    background: none;
+    min-width: 100px;
+    border-radius: 3rem;
+    background: none;
+    border: 1px solid #434343;
+    padding: 0px 25px 0 15px;
+    font-weight: 300;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none; }
+    .select-folder button:hover, .select-folder button:focus {
+      outline: none; }
+    .select-folder button:after {
+      content: '\f107';
+      font: normal normal normal 14px/1 FontAwesome;
+      position: absolute;
+      top: 5px;
+      font-size: 20px;
+      border: none; }
+  .select-folder .dropdown-menu {
+    min-width: auto;
+    right: 0;
+    margin: 0;
+    padding: 0; }
+    .select-folder .dropdown-menu li a {
+      padding: 0 15px; }
+
 .table td, .table th {
   padding: 5px; }
 
@@ -289,6 +322,7 @@ ul {
 .logo-bx {
   height: 120px;
   width: 120px;
+  padding: 0.3rem;
   border-radius: 100%;
   background-color: #ffffff;
   margin: 0 auto 4rem;
@@ -303,7 +337,12 @@ ul {
   background-color: #ffffff;
   padding: 4rem; }
   .login-form-dv h2 {
-    font-weight: 300; }
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 2.5rem; }
+    .login-form-dv h2 span {
+      display: block; }
   .login-form-dv .input-bx {
     margin-bottom: 1.5rem; }
   .login-form-dv .common-btn {
@@ -379,7 +418,10 @@ ul {
       vertical-align: 3px; }
 
 .dash-sidebar-title {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: normal; }
+  .dash-sidebar-title span {
+    font-size: 1rem; }
 
 .sidebar-links-bx {
   padding: 1.5rem 1rem; }
@@ -506,7 +548,8 @@ ul {
     text-align: right; }
 .dash-table .ed-btn {
   background: none;
-  border: none; }
+  border: none;
+  opacity: 0.5; }
   .dash-table .ed-btn img {
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -514,9 +557,11 @@ ul {
     transition: all 0.3s ease-out;
     -webkit-filter: grayscale(1);
     filter: grayscale(1); }
-  .dash-table .ed-btn:hover img, .dash-table .ed-btn:focus img {
-    -webkit-filter: none;
-    filter: none; }
+  .dash-table .ed-btn:hover, .dash-table .ed-btn:focus {
+    opacity: 1; }
+    .dash-table .ed-btn:hover img, .dash-table .ed-btn:focus img {
+      -webkit-filter: none;
+      filter: none; }
 .dash-table .delete-btn {
   margin-left: 0.5rem; }
 

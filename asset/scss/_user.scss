@@ -77,6 +77,10 @@
 }
 .dash-sidebar-title{
 	text-transform: uppercase;
+	font-weight: normal;
+	span{
+		font-size: 1rem;
+	}
 }
 
 // sidebar links
@@ -238,12 +242,14 @@
 	.ed-btn{
 		background: none;
 		border: none;
+		opacity: 0.5;
 		img{
 			@include common-transition(all 0.3s ease-out);
 			@include filter(grayscale(1));
 		}
 		&:hover,&:focus{
 			img{@include filter(none);}
+			opacity: 1;
 		}
 	}
 	.delete-btn{margin-left: 0.5rem;}

@@ -77,9 +77,10 @@ ul{
 
 .form-control {
 	height: auto;
-	padding: 10px 15px;
+	padding: 14px 15px;
 	border: 1px solid #c1c1c1;
 	border-radius: 0;
+	font-size: 14px;
 	outline: none;
 	&:hover,&:focus{
 		@include box-shadow(none);
@@ -254,6 +255,39 @@ ul{
 		&:hover,&:focus{
 			outline:none;
 		}
+	}
+}
+.select-folder{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 1.5rem;
+	button{
+		background: none;
+		min-width: 100px;
+		border-radius: 3rem;
+		background: none;
+		border: 1px solid $color-site;
+		padding: 0px 25px 0 15px;
+		font-weight: 300;
+		@include appearance(none);
+		&:hover,&:focus{
+			outline:none;
+		}
+		&:after{
+			content: '\f107';
+			font: normal normal normal 14px/1 FontAwesome;
+			position: absolute;
+			top: 5px;
+			font-size: 20px;
+			border: none;
+		}
+	}
+	.dropdown-menu{
+		min-width: auto;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		li a{padding: 0 15px;}
 	}
 }
 

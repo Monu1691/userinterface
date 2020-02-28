@@ -16,6 +16,7 @@
 .logo-bx{
 	height: 120px;
 	width: 120px;
+	padding: 0.3rem;
 	border-radius: 100%;
 	background-color: $color-white;
 	margin: 0 auto 4rem;
@@ -33,7 +34,15 @@
 	margin: 0 auto;
 	background-color: $color-white;
 	padding: 4rem;
-	h2{font-weight: 300;}
+	h2{
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 34px;
+		margin-bottom: 2.5rem;
+		span{
+			display: block;
+		}
+	}
 	.input-bx{
 		margin-bottom: 1.5rem;
 	}
